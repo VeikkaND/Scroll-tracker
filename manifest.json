@@ -1,9 +1,20 @@
 {
     "manifest_version": 3,
-    "name": "Scroll-tracekr",
+    "name": "Scroll-tracker",
     "description": "Base Level Extension",
     "version": "1.0",
     "action": {
       "default_popup": "tracker.html"
-    }
+    },
+    "content_scripts": [
+        {
+            "js": ["tracker.js"],
+            "matches": ["<all_urls>"]
+            
+        }
+    ],
+    "permissions": [
+        "storage",
+        "activeTab"
+    ]
   }
